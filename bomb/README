@@ -1,15 +1,2 @@
 This is an x86-64 bomb for self-study students. 
 
- # phase_1
- 1. 找到调用`phase_1`的函数入口
- 2. 进到`phase_1`中发现调用`strings_not_equal`函数
- 3. 查看`strings not equal`的函数，发现传入了两个参数
- 4. 回到`phase1`，发现将`0x402400`作为参数传递了，这个`0x402400`应该是一个字符串常量的地址
- 5. 来到数据区文件中寻找`402400`，发现这里有72 64，这是`402400`指向的字符串
- 6. 去xxd生成的文件中搜索`7264`，发现字符串`Border relations with Canada have never been better.`
-
- # phase_2
-
-前置知识：`rdi rsi rdx rcx r8 r9`用来传参的6个寄存器
-
-
